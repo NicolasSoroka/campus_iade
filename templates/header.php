@@ -113,7 +113,9 @@ if (!isset($_SESSION['logged'])) {
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="user.php">Alta/edicion de usuario</a>
+                                    <a class="dropdown-item" href="delete-user.php">Eliminar usuario</a>
                                     <a class="dropdown-item" href="assign.php">Asignacion de curso</a>
+                                    <a class="dropdown-item" href="remove-course.php">Quitar curso a un alumno</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="courses.php">Alta de curso</a>
                                     <a class="dropdown-item" href="content.php">Modificacion de contenidos</a>
