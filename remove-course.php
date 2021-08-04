@@ -38,7 +38,7 @@ if ($_SESSION['mensaje'] != "") {
                     <input type="text" name="nombre" id="nombre" value="" placeholder="Nombre" disabled>
                     <input type="text" name="apellido" id="apellido" value="" placeholder="Apellido" disabled>
                     <input type="text" name="email" id="email" value="" placeholder="Email" disabled>
-                    <input type="text" name="tel" id="tel" value="" placeholder="Teléfono" disabled>
+                    <input type="text" name="tel" id="tel" value="" placeholder="TelÃ©fono" disabled>
                 </div>
             </div>
             <div class="row">
@@ -64,7 +64,7 @@ if ($_SESSION['mensaje'] != "") {
                         success: function(response) {
                             var data_alumno = JSON.parse(response);
                             if (data_alumno == null) {
-                                alert("No se encontro usuario.")
+                                alert("No se encontro usuario.");
                                 location.reload();
                             }
                             $("#dni").val(data_alumno.dni);
@@ -89,9 +89,9 @@ if ($_SESSION['mensaje'] != "") {
                             id: id_user
                         },
                         success: function(response) {
-                            var data_courses = JSON.parse(response);
+                            let data_courses = JSON.parse(response);
                             if (data_courses == null) {
-                                alert("Error al buscar cursos")
+                                alert("Error al buscar cursos");
                                 location.reload();
                             }
                             select = document.getElementById('select-courses');
@@ -99,6 +99,7 @@ if ($_SESSION['mensaje'] != "") {
                             for (i = length - 1; i >= 0; i--) {
                                 select.options[i] = null;
                             }
+
                             data_courses.forEach(element => {
                                 var opt = document.createElement('option');
                                 opt.value = element.id_curso;

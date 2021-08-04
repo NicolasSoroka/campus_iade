@@ -10,6 +10,8 @@ $curso = $db->fetch();
 
 $_SESSION['course_name_exam'] = $curso['nombre'];
 $_SESSION['courseId'] = $cursoId;
+$profile_ok = $_SESSION['user']['profile_ok'];
+
 ?>
 
 <div class="container-fluid mycourses">
@@ -81,13 +83,8 @@ $_SESSION['courseId'] = $cursoId;
 										<input type="hidden" value="<?= $_SESSION['courseId']; ?>" name="courseName">
 									</form>
 								<?php }
-								if ($curso_p['pago'] == 1 && $curso_p['nota'] >= 6) { ?>
-									<form action="certificate.php" method="post">
-										<button type="submit" class="card-text btn btn-warning">
-											Descargar certificado del curso
-										</button>
-										<input type="hidden" value="<?= $curso['exams']; ?>" name="examen">
-									</form>
+								if ($curso_p['pago'] == 1 && $curso_p['nota'] >= 6 && $profile_ok == 1) { ?>
+										<a href="diploma.php" class="card-text btn btn-warning">Descargar certificado del curso</a>
 								<?php } ?>
 							</div>
 						</div>

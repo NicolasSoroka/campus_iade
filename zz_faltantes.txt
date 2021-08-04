@@ -6,3 +6,7 @@ corregir que, al descrgar material, deja una copia en el server
 
 Fede:
 chequear categorias para los cursos
+
+campus - 
+post examen, comprobacion de datos para imprimir certificado.
+    - entre esos datos, pedir carga de DNI (pendiente de aprobacion.)

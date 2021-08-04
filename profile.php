@@ -85,6 +85,10 @@ if ($_SESSION['mensaje'] != "") {
               <input type="text" name="apellido" class="form-control" id="apellido" value="<?= $datos_usuario['apellido']; ?>" required>
             </div>
             <div class="col-md-12 mb-3">
+              <label for="validationDefault02">Cedula de identidad</label>
+              <input type="text" name="apellido" class="form-control" id="cedula" value="<?= $datos_usuario['cedula']; ?>" required>
+            </div>
+            <div class="col-md-12 mb-3">
               <label for="validationDefault03">Email de Contacto</label>
               <input type="email" name="mail" class="form-control" id="email" value="<?= $datos_usuario['email']; ?>" placeholder="correo@ejemplo.com">
             </div>
@@ -102,13 +106,6 @@ if ($_SESSION['mensaje'] != "") {
     </div>
 
     <script>
-      // var save = document.getElementById("btnSave");
-      //     	save.addEventListener("keydown", function(e) {
-      //       if (e.keyCode === 13) {
-      //         update();
-      //       }
-      //     });  
-
       function update() {
         if (!($('#nombre').val() && $('#apellido').val())) {
           alert("Nombre y apellido son obligatorios");
@@ -116,6 +113,7 @@ if ($_SESSION['mensaje'] != "") {
         }
         var info = {
           "nombre": $("#nombre").val(),
+          "cedula": $("#cedula").val(),
           "apellido": $("#apellido").val(),
           "mail": $("#email").val(),
           "tel": $("#tel").val(),
@@ -127,10 +125,9 @@ if ($_SESSION['mensaje'] != "") {
           url: 'update.php',
           data: info,
           success: function(response) {
-            window.location.reload(true);
+            location.reload(true);
           }
         });
-        window.location.reload(true);
       }
 
       document.getElementById("file-input").onchange = function() {

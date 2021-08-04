@@ -1,0 +1,98 @@
+/*///////////// Diploma Section ///////////////////////////////*/
+
+#diploma {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: #082A76;
+}
+
+.container-diploma {
+    width: 100%;
+    border: 3px solid #082A76;
+    border-left: 15px solid #082A76;
+    border-radius: 1px;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    padding: 0 20px;
+}
+
+.container-diploma .header {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+    margin: 0 0;
+    margin-top: 20px;
+}
+
+.container-diploma .header h2 {
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+.container-diploma .header h1 {
+    font-weight: 600;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.container-diploma .header h3 {
+    font-weight: 200;
+    font-size: 15px;
+}
+
+.container-diploma .informacion-curso {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+    margin: 0 0;
+    margin-top: 70px;
+}
+
+.container-diploma .informacion-curso p {
+    font-weight: 400;
+    font-size: 19px;
+    margin-left: 0px;
+}
+
+.container-diploma .informacion-curso p:nth-child(1) {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.container-diploma .informacion-curso p:nth-child(2) {
+    text-align: center;
+    font-size: 33px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.container-diploma .informacion-curso p:nth-child(3) {
+    text-align: right;
+}
+
+.container-diploma .logos-y-certificaciones {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 0 0;
+    margin-top: 80px;
+    align-items: center;
+}
+
+.container-diploma .logos-y-certificaciones .firma-director img {
+    border-bottom: 2px solid #082A76;
+}
+
+/*///////////// End Diploma Section ///////////////////////////////*/

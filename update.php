@@ -2,7 +2,10 @@
 require "./globals/Database.php";
 $db = Database::getInstance();
 
+session_start();
+
         $nombre = $db->escapeWildcards($db->escape($_POST['nombre']));
+        $cedula = $db->escapeWildcards($db->escape($_POST['cedula']));
         $apellido = $db->escapeWildcards($db->escape($_POST['apellido']));
         $email = $db->escapeWildcards($db->escape($_POST['mail']));
         $telefono = $db->escapeWildcards($db->escape($_POST['tel']));
@@ -25,11 +28,14 @@ $db = Database::getInstance();
         {
                 $db->query("UPDATE personas SET 
                                 nombre ='$nombre',
+                                cedula ='$cedula',
                                 apellido ='$apellido',
                                 telefono ='$telefono',
-                                email ='$email'
+                                email ='$email',
+                                profile_ok = 1
                                 WHERE dni ='$dni' 
                                 LIMIT 1");
         $_SESSION['msg_status'] = 1;
+        $_SESSION['user']['profile_ok'] = 1;
         }
 ?>
