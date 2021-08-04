@@ -37,5 +37,8 @@ session_start();
                                 LIMIT 1");
         $_SESSION['msg_status'] = 1;
         $_SESSION['user']['profile_ok'] = 1;
+        $_SESSION['user']['nombre'] = $nombre;
+        $_SESSION['user']['apellido'] = $apellido;
+        $_SESSION['user']['cedula'] = $cedula;
         }
 ?>
